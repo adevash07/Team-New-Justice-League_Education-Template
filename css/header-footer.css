@@ -2,7 +2,7 @@
   --base-color: #1652f0;
   --primary-color: #05b169;
   --secondary-color: #ffcf40;
-  --font-stack: 'Poppins', sans-serif;
+  --font-stack: "Poppins", sans-serif;
 }
 
 * {
@@ -14,9 +14,15 @@
 body {
   font-family: var(--font-stack);
   color: #000;
+  overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-stack);
   font-weight: bold;
   color: var(--base-color);
@@ -25,22 +31,22 @@ h1, h2, h3, h4, h5, h6 {
 /* Utility */
 .bg-base {
   background-color: var(--base-color) !important;
- }
+}
 
 .bg-primary {
- background-color: var(--primary-color) !important;
+  background-color: var(--primary-color) !important;
 }
 
 .bg-secondary {
   background-color: var(--secondary-color) !important;
 }
 
-
 /* Header */
 header {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   background: var(--secondary-color);
+  border-bottom: 1px solid #333;
 }
 
 header nav .current {
@@ -48,7 +54,7 @@ header nav .current {
 }
 
 header .navbar-dark .navbar-nav .nav-link {
-  color: #fff !important;
+  color: #333 !important;
 }
 
 header .nav-btn.btn-outline-light:hover {
@@ -73,5 +79,67 @@ header .btn:hover {
   opacity: 0.9 !important;
 }
 
-
 /* Footer */
+footer p {
+  color: white !important;
+  display: block;
+  line-height: 200.5%;
+  font-weight: 300;
+  opacity: 0.7;
+}
+footer a {
+  color: white !important;
+  display: block;
+  line-height: 270%;
+  font-weight: 300;
+  opacity: 0.7;
+}
+footer a:hover {
+  opacity: 0.9 !important;
+  color: white !important;
+  text-decoration: none;
+}
+footer p.head {
+  opacity: 0.9;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+/* a{
+  font-size: 0.9rem;
+} */
+
+footer {
+  background-color: var(--base-color) !important;
+  padding: 4rem;
+}
+.logo img {
+  width: 30px;
+  height: 30px;
+  transition: ease-in-out 0.4s all;
+  cursor: pointer;
+}
+.logo img:hover {
+  width: 35px;
+  height: 35px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  header nav .btn {
+    margin-top: 1rem;
+  }
+  .navbar .navbar-brand {
+    font-size: 30px;
+  }
+  img.img-fluid {
+    max-width: 70%;
+  }
+
+  footer p {
+    font-size: 0.7rem;
+  }
+
+  footer a {
+    font-size: 0.7rem;
+  }
+}
